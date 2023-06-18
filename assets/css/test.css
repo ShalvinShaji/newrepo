@@ -1,5 +1,5 @@
 /*===== GOOGLE FONTS =====*/
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 /*===== VARIABLES CSS =====*/
 :root {
@@ -13,7 +13,7 @@
   --container-color: #ffffff;
 
   /*========== Font and typography ==========*/
-  --body-font: "Raleway", sans-serif;
+  --body-font: "Poppins", sans-serif;
   --biggest-font-size: 2.25rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -66,7 +66,7 @@ body {
 }
 
 a {
-  color: crimson;
+  color: #051441;
   text-decoration: none;
 }
 
@@ -103,6 +103,13 @@ a:focus,
 ========================================*/
 .topbar{
     height: 40px;
+}
+
+.topbar .hospital-contact span{
+  font-size: var(--small-font-size);
+}
+.topbar .hospital-contact i{
+  margin-right: var(--mb-2);
 }
 
 /*======================================
@@ -264,7 +271,7 @@ a:focus,
 
   .header .nav-inner {
     display: block !important;
-    padding: 15px;
+    /* padding: 15px; */
   }
 
   .header .navbar-collapse {
@@ -386,12 +393,14 @@ a:focus,
   margin: 0;
 }
 
+
 @media (max-width: 767px) {
   .header .navbar-logo {
     display: block;
     text-align: left;
     padding: 0;
   }
+ 
 }
 
 .header .navbar-logo a {
@@ -411,21 +420,35 @@ a:focus,
 }
 
 .header .navbar-logo h1 {
+  font-size: 28px;
   font-weight: bold;
-  font-size: 28px !important;
   color: #2e2e2e;
   padding: 0 !important;
   margin: 1px;
 }
+
+
+
+
 .header .navbar-logo h2 {
-  font-size: 16px !important;
+  font-size: 16px;
   color: #2e2e2e;
   letter-spacing: 0.5px;
+  margin: 1px;
+
   /* text-align: center; */
 }
-/* .header .navbar-logo h4{
-      font-size: 14px !important;
-    } */
+
+@media (max-width: 767px) {
+  .header .navbar-logo h1 {
+    font-size: 22px;
+  }
+  .header .navbar-logo h2 {
+    font-size: 13px;
+  }
+}
+
+
 
 .header.sticky .navbar-logo .white-logo {
   opacity: 0;
@@ -501,7 +524,9 @@ a:focus,
 }
 
 .mobile-menu-btn {
-  padding: 0px;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
 }
 
 .mobile-menu-btn:focus {
@@ -520,6 +545,7 @@ a:focus,
   position: relative;
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
+  
 }
 
 .mobile-menu-btn.active .toggler-icon:nth-of-type(1) {
